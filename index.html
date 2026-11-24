@@ -145,11 +145,8 @@ body{font-family:"Golos Text",system-ui,sans-serif;font-size:18px;line-height:1.
 .scene .disc{position:absolute;width:var(--s);aspect-ratio:1;left:50%;top:calc(var(--s)*.06);transform:translateX(-50%);border-radius:50%;background:var(--navy-2)}
 .scene .orbit{position:absolute;width:calc(var(--s)*1.1);aspect-ratio:1;left:50%;top:calc(var(--s)*.01);transform:translateX(-50%);overflow:visible}
 .orbit .ring{fill:none;stroke:var(--gold);stroke-width:.45;stroke-dasharray:80 20}
-.orbit .dot{fill:var(--gold-hi)}
 .hero .orbit .ring{animation:draw 2.6s cubic-bezier(.65,0,.25,1) .2s both}
-.hero .orbit .dot{transform-box:fill-box;transform-origin:center;animation:dot .7s ease 2.6s both}
 @keyframes draw{from{stroke-dasharray:0 100}to{stroke-dasharray:80 20}}
-@keyframes dot{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:none}}
 /* центр между лицами (43,90 % ширины картинки, tools/matte4.py) ставим ровно в центр круга; вырезка — нейросеть ViTMatte */
 .duo{position:absolute;left:50%;top:calc(var(--s)*0.0983);width:calc(var(--s)*0.9817);max-width:none;transform:translateX(-43.90%);animation:rise 1.4s cubic-bezier(.2,.7,.2,1) .1s both}
 @keyframes rise{from{opacity:0;transform:translate(-43.90%,18px)}to{opacity:1;transform:translateX(-43.90%)}}
@@ -428,12 +425,11 @@ footer img{width:150px}
   .card a+a{font-size:14.5px;padding-top:4px}
   .motto{font-size:17px;margin-top:22px}
   .scene2{--s:min(70vw,290px)}
-  /* разделитель «кольцо с точкой» — знак из логотипа, между формулой и «Двумя школами» */
+  /* разделитель «кольцо» — знак из логотипа без точки (Эльвира 23.11), между формулой и «Двумя школами» */
   .sep{display:flex;align-items:center;gap:16px;padding-bottom:44px}
   .sep::before,.sep::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(196,164,100,0),rgba(196,164,100,.7))}
   .sep::after{background:linear-gradient(90deg,rgba(196,164,100,.7),rgba(196,164,100,0))}
   .sep i{position:relative;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold)}
-  .sep i::after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:var(--gold);right:-1px;top:3px}
   .duo-pts{display:block;order:3;margin-top:18px}
   .duo-pts li{position:relative;padding-left:30px;margin-top:12px;font-size:17px;line-height:1.35;font-weight:500;color:var(--ink)}
   .duo-pts li span{display:block;font-size:14.5px;font-weight:400;color:var(--ink-soft)}
@@ -458,11 +454,11 @@ footer img{width:150px}
       <p class="slogan it">Говори так,<br> чтобы выбирали тебя</p>
       <p class="sub">Тренинг и&nbsp;интенсив по&nbsp;голосу, речи<br> и&nbsp;управлению вниманием</p>
       <div class="acts"><a class="btn btn-gold" href="#formats">Выбрать формат</a><a class="btn btn-line" href="#contacts">Связаться</a></div>
-      <p class="event" data-until="2026-12-05"><b>5&nbsp;декабря — Новогодний экспресс,</b> тренинг деловой коммуникации. <a href="#ny">Подробнее и&nbsp;запись</a></p>
+      <p class="event" data-until="2026-12-05"><b>5&nbsp;декабря — Новогодний интенсив</b> по&nbsp;деловой коммуникации. <a href="#ny">Подробнее и&nbsp;билеты</a></p>
     </div>
     <div class="scene">
       <div class="disc"></div>
-      <svg class="orbit" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="49" pathLength="100" transform="rotate(-62 50 50)"/><circle class="dot" cx="94.5" cy="30.6" r=".9"/></svg>
+      <svg class="orbit" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="49" pathLength="100" transform="rotate(-62 50 50)"/></svg>
       <img class="duo" fetchpriority="high" src="assets/img/duo-stand-vm-1189.webp" srcset="assets/img/duo-stand-vm-800.webp 800w, assets/img/duo-stand-vm-1189.webp 1189w" sizes="(max-width:900px) 80vw, 600px" alt="Елена Жалнина и Эльвира Цымбал" width="1189" height="2256">
       <p class="names"><span><b>Елена Жалнина</b>телеведущая</span><span><b>Эльвира Цымбал</b>актриса</span></p>
     </div>
@@ -567,27 +563,25 @@ footer img{width:150px}
     <div class="ny-card">
       <div>
         <p class="date">5&nbsp;декабря</p>
-        <h2 class="serif" id="ny-h">Новогодний экспресс</h2>
-        <p class="sub">Тренинг деловой коммуникации. 3&nbsp;часа живой практики в&nbsp;парах и&nbsp;мини-группах</p>
+        <h2 class="serif" id="ny-h">Новогодний интенсив</h2>
+        <p class="sub">По&nbsp;деловой коммуникации. 3&nbsp;часа живой практики в&nbsp;парах и&nbsp;мини-группах</p>
         <p class="lead">Декабрь — главный сезон нетворкинга: корпоративы, ёлки партнёров, встречи с&nbsp;клиентами. За&nbsp;три часа научим превращать их в&nbsp;новые контакты и&nbsp;сделки.</p>
         <div class="faces">
           <figure><img src="assets/img/elena-round.webp" alt="" width="360" height="360" loading="lazy"><figcaption>Елена Жалнина, телеведущая</figcaption></figure>
           <figure><img src="assets/img/elvira-round.webp" alt="" width="360" height="360" loading="lazy"><figcaption>Эльвира Цымбал, актриса</figcaption></figure>
         </div>
         <div class="acts2">
-          <a class="btn btn-navy" href="#contacts">Записаться</a>
-          <span class="soon">Время и&nbsp;место скоро появятся здесь</span>
+          <a class="btn btn-navy" href="https://moscow.qtickets.events/276344-novogodniy-intensiv-po-delovoy-kommunikatsii" target="_blank" rel="noopener">Стать участником</a>
+          <span class="soon">Суббота, Level 5, Малый Патриарший пер., 5</span>
         </div>
       </div>
       <div>
-        <div class="more"><input class="more-t" type="checkbox" id="more-ny"><label class="more-l" for="more-ny"><span class="more-x"><b>Пять упражнений за&nbsp;три часа</b><span>Пригодятся на&nbsp;ближайшем корпоративе</span></span></label><div class="more-c">
-        <h3>Что будем делать</h3>
+        <div class="more"><input class="more-t" type="checkbox" id="more-ny"><label class="more-l" for="more-ny"><span class="more-x"><b>Три навыка за&nbsp;три часа</b><span>Пригодятся на&nbsp;ближайшем корпоративе</span></span></label><div class="more-c">
+        <h3>Чему научимся</h3>
         <ul>
-          <li><b>Самопрезентация за&nbsp;30&nbsp;секунд.</b> Рассказ о&nbsp;себе, после которого спрашивают: «А&nbsp;как с&nbsp;вами связаться?»</li>
-          <li><b>Разговор с&nbsp;незнакомцем.</b> Как начать смол-ток, найти общую пользу и&nbsp;обменяться контактами без неловкости.</li>
-          <li><b>Имена и&nbsp;комплименты.</b> Три приёма запомнить, как зовут собеседника, и&nbsp;сказать приятное без лести.</li>
-          <li><b>Тост как выступление.</b> Минута, когда вас слушает весь зал, — используем её для&nbsp;вашего имиджа.</li>
-          <li><b>Голос и&nbsp;уверенность.</b> Упражнения, которые за&nbsp;пару минут снимают волнение.</li>
+          <li><b>Презентовать себя за&nbsp;30&nbsp;секунд,</b> чтобы вас запомнили и&nbsp;захотели продолжить разговор.</li>
+          <li><b>Заводить нужные знакомства:</b> первыми начинать беседу, находить общую тему и&nbsp;устанавливать контакт.</li>
+          <li><b>Уверенно брать слово</b> в&nbsp;любой компании и&nbsp;говорить так, чтобы вас слушали и&nbsp;запоминали.</li>
         </ul></div></div>
         <p class="take"><b>Унесёте:</b> готовую самопрезентацию, новые знакомства прямо в&nbsp;зале, схемы для&nbsp;разговора и&nbsp;тоста.</p>
       </div>
@@ -609,7 +603,7 @@ footer img{width:150px}
     </div>
     <div class="scene2">
       <div class="disc"></div>
-      <svg class="orbit" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="49" pathLength="100" transform="rotate(-62 50 50)"/><circle class="dot" cx="94.5" cy="30.6" r="1"/></svg>
+      <svg class="orbit" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="49" pathLength="100" transform="rotate(-62 50 50)"/></svg>
       <img class="soft" src="assets/img/duo-play-vm-1544.webp" srcset="assets/img/duo-play-vm-800.webp 800w, assets/img/duo-play-vm-1544.webp 1544w" sizes="(max-width:900px) 88vw, 530px" alt="Эльвира Цымбал и Елена Жалнина" width="1544" height="2259" loading="lazy">
     </div>
   </div>
