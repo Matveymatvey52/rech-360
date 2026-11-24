@@ -236,6 +236,10 @@ main{position:relative;z-index:2;margin-top:-84px;background:var(--light);border
 .ny li b{font-weight:500;color:var(--ink)}
 .ny .take{margin-top:22px;font-size:16px;color:var(--ink-soft)}
 .ny .take b{color:var(--ink);font-weight:500}
+/* правая колонка: цитата со страницы билетов прижата к низу, на уровень кнопки */
+.ny-card>div:last-child{display:flex;flex-direction:column}
+.ny .quote{margin-top:auto;padding-top:40px;font-size:clamp(20px,1.7vw,25px);line-height:1.35;color:var(--ink);max-width:22em}
+.ny .quote::before{content:"";display:block;width:44px;height:1px;background:var(--gold);margin-bottom:22px}
 
 /* ── финал (слайд 14) ── */
 .final{background:var(--navy);color:var(--on-navy);padding-top:110px;position:relative;overflow:hidden}
@@ -311,6 +315,8 @@ footer img{width:150px}
   .ny-card{grid-template-columns:1fr;padding:38px 22px 32px;gap:30px}
   .ny .faces{gap:14px}.ny .faces figure{width:50%}
   .ny .acts2 .btn{flex:1 1 100%}
+  .ny-card>div:last-child{display:block}
+  .ny .quote{display:none}
   .final{padding-top:70px}
   .final-grid{grid-template-columns:1fr;gap:0}
   .final .txt{padding-bottom:30px}
@@ -584,6 +590,7 @@ footer img{width:150px}
           <li><b>Уверенно брать слово</b> в&nbsp;любой компании и&nbsp;говорить так, чтобы вас слушали и&nbsp;запоминали.</li>
         </ul></div></div>
         <p class="take"><b>Унесёте:</b> готовую самопрезентацию, новые знакомства прямо в&nbsp;зале, схемы для&nbsp;разговора и&nbsp;тоста.</p>
+        <p class="quote it">Новый год — это не&nbsp;только подарки и&nbsp;бокал шампанского. Это&nbsp;десятки людей вокруг, каждый из&nbsp;которых может оказаться вашим будущим партнёром.</p>
       </div>
     </div>
   </section>
