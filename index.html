@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://matveymatvey52.github.io/rech-360/">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Речь 360", "description": "Тренинг и интенсив по голосу, речи и управлению вниманием. Ведут телеведущая Елена Жалнина и актриса Эльвира Цымбал.", "member": [{"@type": "Person", "name": "Елена Жалнина", "jobTitle": "телеведущая", "telephone": "+79057508721", "email": "zhaelena@mail.ru"}, {"@type": "Person", "name": "Эльвира Цымбал", "jobTitle": "актриса", "telephone": "+79104742850", "email": "tsymbalelvira@gmail.com"}], "url": "https://matveymatvey52.github.io/rech-360/", "logo": "https://matveymatvey52.github.io/rech-360/apple-touch-icon.png"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Речь 360", "description": "Тренинг и интенсив по голосу, речи и управлению вниманием. Ведут телеведущая Елена Жалнина и актриса Эльвира Цымбал.", "telephone": "+79953001577", "sameAs": ["https://t.me/speech360"], "member": [{"@type": "Person", "name": "Елена Жалнина", "jobTitle": "телеведущая"}, {"@type": "Person", "name": "Эльвира Цымбал", "jobTitle": "актриса"}], "url": "https://matveymatvey52.github.io/rech-360/", "logo": "https://matveymatvey52.github.io/rech-360/apple-touch-icon.png"}</script>
 <meta name="theme-color" content="#0A1B33">
 <link rel="preload" href="assets/fonts/NotoSerifDisplay-normal-cyrillic-163d02.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/GolosText-normal-cyrillic-721d01.woff2" as="font" type="font/woff2" crossorigin>
@@ -186,7 +186,7 @@ main{position:relative;z-index:2;margin-top:-84px;background:var(--light);border
 .h2{font-size:clamp(38px,4.2vw,62px);line-height:1.04}
 .cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 22px;margin-top:44px}
 /* общая сетка строк: номер, заголовок, текст, итог, кнопка — во всех карточках на одной высоте */
-.c{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0;background:#fff;border:1px solid rgba(27,36,48,.08);border-radius:16px;padding:34px 30px 30px;box-shadow:0 18px 40px -30px rgba(10,27,51,.35)}
+.c{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:0;background:#fff;border:1px solid rgba(27,36,48,.08);border-radius:16px;padding:34px 30px 30px;box-shadow:0 18px 40px -30px rgba(10,27,51,.35)}
 .c h3{font-size:25px;line-height:1.16;margin-top:22px}
 .c p{margin-top:14px;font-size:16.5px;color:var(--ink-soft)}
 .c .res{margin-top:18px;padding-top:16px;border-top:1px solid rgba(196,164,100,.4);font-family:"Noto Serif Display",serif;font-style:italic;font-weight:400;font-size:19px;line-height:1.45;color:var(--gold-ink)}
@@ -201,7 +201,7 @@ main{position:relative;z-index:2;margin-top:-84px;background:var(--light);border
 .f .kind{font-size:14px;color:var(--gold-ink)}
 .f.dark .kind{color:var(--gold-hi)}
 .f .len{font-family:"Noto Serif Display",serif;font-weight:400;font-size:clamp(64px,6.6vw,100px);line-height:.9;margin-top:16px}
-.f .len small{font-family:"Golos Text",sans-serif;font-size:18px;margin-left:12px;letter-spacing:0;color:var(--ink-soft)}
+.f .len small{font-family:"Golos Text",sans-serif;font-size:clamp(22px,2vw,28px);margin-left:14px;letter-spacing:0;color:var(--ink-soft)}
 .f.dark .len small{color:var(--on-navy-soft)}
 .f h3{font-size:32px;line-height:1.1;margin-top:18px}
 .f .what{margin-top:12px;font-size:17px;color:var(--ink-soft)}
@@ -254,6 +254,14 @@ main{position:relative;z-index:2;margin-top:-84px;background:var(--light);border
 .card a{display:block;text-decoration:none;font-size:19px;margin-top:16px;padding-top:14px;border-top:1px solid var(--navy-line)}
 .card a+a{font-size:16px;margin-top:0;border-top:0;padding-top:6px;color:var(--on-navy-soft)}
 .card a:hover{color:var(--gold-hi)}
+/* один общий контакт: телефон и Telegram-самолётик (Эльвира 25.11) */
+.card.one{display:flex;align-items:center;justify-content:space-between;gap:18px 28px;flex-wrap:wrap;max-width:520px;padding:22px 24px}
+.card.one a{margin:0;padding:0;border:0}
+.card.one .tel{font-size:clamp(22px,2vw,26px);color:var(--on-navy)}
+.card.one .tg{display:inline-flex;align-items:center;gap:12px;font-size:16px;color:var(--on-navy-soft)}
+.card.one .tg i{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-hi);transition:background .2s,color .2s}
+.card.one .tg svg{width:21px;height:21px;fill:currentColor;margin-left:-2px}
+.card.one .tg:hover i{background:var(--gold);color:var(--navy)}
 .motto{display:flex;align-items:center;gap:18px;margin-top:40px;font-size:22px;font-weight:400;color:var(--gold-hi)}
 .motto::before{content:"";width:48px;height:1px;background:var(--gold)}
 .scene2{position:relative;align-self:end;--s:min(32vw,460px);height:calc(var(--s)*1.52)}
@@ -379,7 +387,7 @@ footer img{width:150px}
   .f{padding:24px 20px 20px}
   .f .kind{font-size:13px}
   .f .len{font-size:48px;margin-top:8px}
-  .f .len small{font-size:15px;margin-left:8px}
+  .f .len small{font-size:20px;margin-left:10px}
   .f h3{font-size:25px;margin-top:8px}
   .f .what{font-size:15px;margin-top:8px}
   .f h4{margin-top:14px;font-size:13px}
@@ -508,23 +516,20 @@ footer img{width:150px}
     <div class="cards3">
       <article class="c">
         <span class="num">1</span>
-        <h3 class="serif">Компаниям и&nbsp;командам</h3>
-        <p>Корпоративные тренинги и&nbsp;тимбилдинги. Как говорят друг с&nbsp;другом сотрудники и&nbsp;руководители и&nbsp;как компания звучит перед клиентами, инвесторами и&nbsp;партнёрами.</p>
-        <p class="res">Встречи короче, решения быстрее, первые лица звучат увереннее.</p>
+        <h3 class="serif">Корпоративным клиентам</h3>
+        <p>Масштабирование бизнеса и&nbsp;увеличение дохода за&nbsp;счёт уверенного и&nbsp;убедительного общения внутри компании и&nbsp;с&nbsp;внешними клиентами.</p>
         <a class="btn btn-navy" href="#contacts">Пригласить в&nbsp;компанию</a>
       </article>
       <article class="c">
         <span class="num">2</span>
         <h3 class="serif">Форумам, выставкам, конференциям</h3>
-        <p>Готовим спикеров: отточенная подача, уверенный голос и&nbsp;чёткая структура вместо волнения и&nbsp;«воды». Мероприятие растёт в&nbsp;цене.</p>
-        <p class="res">Площадка, куда возвращаются спикеры, партнёры и&nbsp;участники.</p>
+        <p>Мероприятие растёт в&nbsp;цене благодаря подготовленным спикерам с&nbsp;точной подачей, уверенным голосом и&nbsp;чёткой структурой вместо волнения и&nbsp;«воды».</p>
         <a class="btn btn-navy" href="#contacts">Пригласить на&nbsp;форум</a>
       </article>
       <article class="c">
         <span class="num">3</span>
-        <h3 class="serif">Всем, кто хочет говорить убедительно</h3>
-        <p>Спикерам на&nbsp;мероприятиях, публичным профессионалам и&nbsp;экспертам — на&nbsp;сцене, в&nbsp;интервью и&nbsp;перед камерой.</p>
-        <p class="res">Убедительность — это навык, а&nbsp;не&nbsp;природный дар.</p>
+        <h3 class="serif">Индивидуальный подход</h3>
+        <p>Готовим экспертов к&nbsp;выступлению на&nbsp;сцене, работе с&nbsp;камерой и&nbsp;интервью.</p>
         <a class="btn btn-navy" href="#contacts">Написать</a>
       </article>
     </div>
@@ -541,7 +546,7 @@ footer img{width:150px}
         <p class="what">Быстрая настройка и&nbsp;практические инструменты для&nbsp;тех, кто хочет сразу применить технику в&nbsp;работе.</p>
         <div class="more"><input class="more-t" type="checkbox" id="more-ex"><label class="more-l" for="more-ex"><span class="more-x"><b>Узнаёте себя?</b><span>С&nbsp;чем приходят и&nbsp;с&nbsp;чем уходят</span></span></label><div class="more-c">
         <h4>С&nbsp;чем приходят</h4>
-        <p class="req">Теряют внимание зала или совещания, путаются в&nbsp;словах и&nbsp;мыслях, зажимаются перед камерой, не&nbsp;знают, что сказать в&nbsp;смол-токе и&nbsp;как рассказать о&nbsp;себе.</p>
+        <p class="req">Теряют внимание зала или совещания, путаются в&nbsp;словах и&nbsp;мыслях, зажимаются перед камерой, не&nbsp;могут довести сделки до&nbsp;результата, не&nbsp;знают, что сказать в&nbsp;смол-токе и&nbsp;как рассказать о&nbsp;себе.</p>
         <h4>Результат</h4>
         <ul><li>Внимание зала от&nbsp;первых слов до&nbsp;конца</li><li>Чёткая артикуляция и&nbsp;уверенный голос без зажимов</li><li>Лёгкий смол-ток и&nbsp;уверенная самопрезентация</li></ul></div></div>
         <div class="spacer"></div>
@@ -603,8 +608,7 @@ footer img{width:150px}
       <h2 class="serif" id="fin-h">Не знаете, что выбрать?<br> Не&nbsp;надо выбирать</h2>
       <p class="lead">Свяжитесь с&nbsp;нами — поможем подобрать формат под&nbsp;ваш запрос.</p>
       <div class="cards">
-        <div class="card"><h3>Елена Жалнина</h3><p>телеведущая</p><a href="tel:+79057508721" class="nowrap">+7&nbsp;905&nbsp;750-87-21</a><a href="mailto:zhaelena@mail.ru">zhaelena@mail.ru</a></div>
-        <div class="card"><h3>Эльвира Цымбал</h3><p>актриса</p><a href="tel:+79104742850" class="nowrap">+7&nbsp;910&nbsp;474-28-50</a><a href="mailto:tsymbalelvira@gmail.com">tsymbalelvira@gmail.com</a></div>
+        <div class="card one"><a href="tel:+79953001577" class="tel nowrap">+7&nbsp;995&nbsp;300-15-77</a><a class="tg" href="https://t.me/speech360" target="_blank" rel="noopener" aria-label="Написать в Telegram @speech360"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6 2.9 10.7c-.9.3-.9 1.6 0 1.9l4.5 1.5 1.7 5.3c.2.8 1.2 1 1.8.4l2.5-2.4 4.6 3.4c.7.5 1.7.1 1.9-.7l3-14.3c.2-1-.8-1.8-1.7-1.4ZM9.6 14.4l-.4 3.9-1.3-4.3 10.1-6.6-8.4 7Z"/></svg></i><span>@speech360</span></a></div>
       </div>
       <p class="motto it">От&nbsp;первого слова — до&nbsp;результата</p>
     </div>
